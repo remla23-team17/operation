@@ -1,0 +1,12 @@
+services:
+  app:
+    image: ghcr.io/remla23-team17/app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - model-service
+
+  model-service:
+    image: ghcr.io/remla23-team17/model-service
+    ports:
+      - "8080:8080"
