@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/remla23-team17/app
+    image: ghcr.io/remla23-team17/app:latest
     ports:
       - "8081:8081"
     networks:
@@ -10,7 +10,7 @@ services:
       - model-service
 
   model-service:
-    image: ghcr.io/remla23-team17/model-service
+    image: ghcr.io/remla23-team17/model-service:latest
     ports:
       - "8080:8080"
     networks:
