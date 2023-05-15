@@ -4,9 +4,9 @@ Continuous deployment and operation utilising Docker (and soon Kubernetes, stay 
 
 ## Utilizing the application
 
-### Setup
+### Preparations
 
-Make sure you have Docker installed on your machine.
+Make sure you have Docker/Minikube installed on your machine.
 
 Clone the repository:
 ```
@@ -18,21 +18,44 @@ Log in to Github docker service:
 docker login ghcr.io
 ```
 
-### Run
+### Run with Docker
+
+#### Start
 Compose the Docker containers (add -d to run in background):
 ``` 
 docker-compose up -d
 ```
 
-### Stop
+#### Access
+
+The app is available at http://localhost:8081.
+
+
+#### Stop
 Stop the Docker containers:
 ``` 
 docker-compose down
 ```
 
-### Access the app
+### Run with Minikube (requires Docker driver)
 
-The app is available at http://localhost:8081.
+#### Start
+Run the deploy minikube script:
+``` 
+./deploy-minikube.sh
+```
+
+#### Access
+
+The app is available at http://192.168.49.2/ 
+
+#### Stop
+Run the destroy minikube script:
+``` 
+./destroy-minikube.sh
+```
+
+
 
 ## Development
 
