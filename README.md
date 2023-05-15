@@ -1,8 +1,8 @@
-# operation
+# Operation
 
 Continuous deployment and operation utilising Docker (and soon Kubernetes, stay tuned!).
 
-## Utilizing the application
+## Instructions
 
 ### Preparations
 
@@ -18,41 +18,59 @@ Log in to Github docker service:
 docker login ghcr.io
 ```
 
-### Run with Docker
+## Run with Docker
 
-#### Start
+### Start
 Compose the Docker containers (add -d to run in background):
 ``` 
 docker-compose up -d
 ```
 
-#### Access
+### Access
 
 The app is available at http://localhost:8081.
 
 
-#### Stop
+### Stop
 Stop the Docker containers:
 ``` 
 docker-compose down
 ```
 
-### Run with Minikube (requires Docker driver)
+## Run with Minikube (requires Docker driver)
 
-#### Start
+### Start
 Run the deploy minikube script:
 ``` 
 ./deploy-minikube.sh
 ```
 
-#### Access
+### Access
 
 The app is available at http://192.168.49.2/ 
 
-#### Stop
+### Stop
 Run the destroy minikube script:
 ``` 
 ./destroy-minikube.sh
+```
+
+## Run with Helm Chart release
+
+### Start
+Run the deploy minikube script:
+``` 
+./deploy-helm.sh
+```
+
+### Access
+
+The app is available at http://192.168.49.2/ 
+
+### Stop
+Run the destroy minikube script:
+``` 
+./destroy-helm.sh
 ```
 
 
