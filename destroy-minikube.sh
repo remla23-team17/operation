@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+helm uninstall prometheus
+
 cd k8s
 kubectl delete -f .
 

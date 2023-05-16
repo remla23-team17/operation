@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+helm uninstall prometheus
 helm uninstall remla23-team17
 helm uninstall nginx
 
