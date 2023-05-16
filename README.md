@@ -1,12 +1,12 @@
-# operation
+# Operation
 
 Continuous deployment and operation utilising Docker (and soon Kubernetes, stay tuned!).
 
-## Utilizing the application
+## Instructions
 
-### Setup
+### Preparations
 
-Make sure you have Docker installed on your machine.
+Make sure you have Docker/Minikube installed on your machine.
 
 Clone the repository:
 ```
@@ -18,11 +18,18 @@ Log in to Github docker service:
 docker login ghcr.io
 ```
 
-### Run
+## Run with Docker
+
+### Start
 Compose the Docker containers (add -d to run in background):
 ``` 
 docker-compose up -d
 ```
+
+### Access
+
+The app is available at http://localhost:8081.
+
 
 ### Stop
 Stop the Docker containers:
@@ -30,9 +37,64 @@ Stop the Docker containers:
 docker-compose down
 ```
 
-### Access the app
+## Run with Minikube (requires Docker driver)
 
-The app is available at http://localhost:8081.
+### Start
+Run the deploy minikube script:
+``` 
+./deploy-minikube.sh
+```
+
+### Access
+
+The app is available at http://192.168.49.2/ or http://localhost/ 
+
+### Stop
+Run the destroy minikube script:
+``` 
+./destroy-minikube.sh
+```
+
+## Run with Helm Chart release
+
+### Start
+Run the deploy minikube script:
+``` 
+./deploy-helm.sh
+```
+
+### Access
+
+The app is available at http://192.168.49.2/ or http://localhost/ 
+
+### Stop
+Run the destroy minikube script:
+``` 
+./destroy-helm.sh
+```
+
+## Run with GKE
+
+### Start
+- Create a gcloud project and enable Kubernetes API.
+- Make sure google cloud cli is installed with the gke component.
+- Copy the project ID and put it in the deploy-gcloud.sh script in the appropriate places. 
+
+Run the deploy gcloud script:
+``` 
+./deploy-gcloud.sh
+```
+
+### Access
+
+The app is available at the IP of the external nginx load balancer.
+
+### Stop
+Run the destroy gcloud script:
+``` 
+./destroy-gcloud.sh
+```
+
 
 ## Development
 
