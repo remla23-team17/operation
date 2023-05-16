@@ -47,7 +47,7 @@ Run the deploy minikube script:
 
 ### Access
 
-The app is available at http://192.168.49.2/ 
+The app is available at http://192.168.49.2/ or http://localhost/ 
 
 ### Stop
 Run the destroy minikube script:
@@ -65,7 +65,7 @@ Run the deploy minikube script:
 
 ### Access
 
-The app is available at http://192.168.49.2/ 
+The app is available at http://192.168.49.2/ or http://localhost/ 
 
 ### Stop
 Run the destroy minikube script:
