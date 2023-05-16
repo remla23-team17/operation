@@ -73,6 +73,27 @@ Run the destroy minikube script:
 ./destroy-helm.sh
 ```
 
+## Run with GKE
+
+### Start
+- Create a gcloud project and enable Kubernetes API.
+- Make sure google cloud cli is installed with the gke component.
+- Copy the project ID and put it in the deploy-gcloud.sh script in the appropriate places. 
+
+Run the deploy gcloud script:
+``` 
+./deploy-gcloud.sh
+```
+
+### Access
+
+The app is available at the IP of the external nginx load balancer.
+
+### Stop
+Run the destroy gcloud script:
+``` 
+./destroy-gcloud.sh
+```
 
 
 ## Development
