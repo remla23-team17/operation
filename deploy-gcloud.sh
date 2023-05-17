@@ -10,8 +10,10 @@ kubectl config use-context gke_remla23-team17_europe-west4_app-cluster
 
 helm repo add repo-operation https://remla23-team17.github.io/helm-chart-operation
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo add prom-repo https://prometheus-community.github.io/helm-charts
 
 helm repo update
 
 helm install remla23-team17 repo-operation/remla23-team17
 helm install nginx ingress-nginx/ingress-nginx
+helm install prometheus prom-repo/kube-prometheus-stack  --set prometheus.service.nodePort=30000 --set prometheus.service.type=NodePort

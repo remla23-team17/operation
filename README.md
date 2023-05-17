@@ -96,6 +96,15 @@ Run the destroy gcloud script:
 ```
 
 
+## Monitoring using Prometheus
+
+### Access
+
+The app is available at http://192.168.49.2:30000 or http://localhost:30000
+
+
+
+
 ## Development
 
 The [app repo](https://github.com/remla23-team17/app) is built using Flask, and uses a RESTful API to connect to the backend.
