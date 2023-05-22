@@ -28,7 +28,7 @@ docker-compose up -d
 
 ### Access
 
-The app is available at http://localhost:8081.
+The app is available at http://localhost.
 
 
 ### Stop

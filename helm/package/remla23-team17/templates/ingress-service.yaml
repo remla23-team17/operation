@@ -10,4 +10,4 @@ spec:
     service:
       name: app-service
       port:
-        number: 8081
+        number: 80
