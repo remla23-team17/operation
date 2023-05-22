@@ -7,9 +7,9 @@ spec:
   selector:
     component: model-service
   ports:
-    - port: 8080
+    - port: 80
       name: http
-      targetPort: 8080
+      targetPort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: model-service
-          image: ghcr.io/remla23-team17/model-service:latest
+          image: ghcr.io/remla23-team17/model-service:0.0.4
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -37,4 +37,4 @@ spec:
               memory: "1Gi"
               cpu: "1"
           ports:
-            - containerPort: 8080
+            - containerPort: 80

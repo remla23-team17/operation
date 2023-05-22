@@ -7,9 +7,9 @@ spec:
   selector:
     component: app
   ports:
-    - port: 8081
+    - port: 80
       name: http
-      targetPort: 8081
+      targetPort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/remla23-team17/app:latest
+          image: ghcr.io/remla23-team17/app:0.0.4
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -37,7 +37,7 @@ spec:
               memory: "1Gi"
               cpu: "1"
           ports:
-            - containerPort: 8081
+            - containerPort: 80
           env:
             - name: MODEL_SERVICE_HOST
-              value: "http://model-service:8080/predict"
+              value: "http://model-service/predict"
