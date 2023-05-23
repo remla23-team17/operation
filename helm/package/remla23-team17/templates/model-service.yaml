@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: model-service
-          image: ghcr.io/remla23-team17/model-service:0.0.4
+          image: ghcr.io/remla23-team17/model-service:1.0.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -38,3 +38,8 @@ spec:
               cpu: "1"
           ports:
             - containerPort: 80
+          env:
+            - name: MODEL_URL
+              value: "https://github.com/remla23-team17/model-training/releases/latest/download/model"
+            - name: BOW_URL
+              value: "https://github.com/remla23-team17/model-training/releases/latest/download/bow.pkl"

@@ -42,7 +42,7 @@ docker-compose down
 ### Start
 Run the deploy minikube script:
 ``` 
-./deploy-minikube.sh
+scripts/minikube/deploy-minikube.sh
 ```
 
 ### Access
@@ -52,7 +52,7 @@ The app is available at http://192.168.49.2/ or http://localhost/
 ### Stop
 Run the destroy minikube script:
 ``` 
-./destroy-minikube.sh
+scripts/minikube/destroy-minikube.sh
 ```
 
 ## Run with Helm Chart release
@@ -60,7 +60,7 @@ Run the destroy minikube script:
 ### Start
 Run the deploy minikube script:
 ``` 
-./deploy-helm.sh
+scripts/helm/deploy-helm.sh
 ```
 
 ### Access
@@ -70,7 +70,7 @@ The app is available at http://192.168.49.2/ or http://localhost/
 ### Stop
 Run the destroy minikube script:
 ``` 
-./destroy-helm.sh
+scripts/helm/destroy-helm.sh
 ```
 
 ## Run with GKE
@@ -82,7 +82,7 @@ Run the destroy minikube script:
 
 Run the deploy gcloud script:
 ``` 
-./deploy-gcloud.sh
+scripts/gcloud/deploy-gcloud.sh
 ```
 
 ### Access
@@ -92,7 +92,7 @@ The app is available at the IP of the external nginx load balancer.
 ### Stop
 Run the destroy gcloud script:
 ``` 
-./destroy-gcloud.sh
+scripts/gcloud/destroy-gcloud.sh
 ```
 
 

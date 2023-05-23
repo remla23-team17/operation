@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/remla23-team17/app:0.0.4
+    image: ghcr.io/remla23-team17/app:1.0.0
     ports:
       - "80:80"
     networks:
@@ -13,7 +13,7 @@ services:
       EXPOSE_PORT: 80
 
   model-service:
-    image: ghcr.io/remla23-team17/model-service:0.0.4
+    image: ghcr.io/remla23-team17/model-service:1.0.0
 #    ports: # No need to open model-service to the host, only open for debugging purposes.
 #      - "81:80"
     networks:
@@ -21,7 +21,8 @@ services:
         ipv4_address: 172.20.0.2
     environment:
       EXPOSE_PORT: 80
-      
+      MODEL_URL: "https://github.com/remla23-team17/model-training/releases/latest/download/model"
+      BOW_URL: "https://github.com/remla23-team17/model-training/releases/latest/download/bow.pkl"
 
 networks:
   network:
